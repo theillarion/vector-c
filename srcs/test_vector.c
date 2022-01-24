@@ -13,7 +13,7 @@ int main()
 	
 	ft_print_vector(vector);
 
-	printf("Deleted: [4]\n");
+	/*printf("Deleted: [4]\n");
 	ft_erase(&vector, 4);
 	ft_print_vector(vector);
 
@@ -32,7 +32,9 @@ int main()
 	printf("Deleted: [0]\n");
 	ft_erase(&vector, 0);
 	ft_print_vector(vector);
-	//size_t	i = 0;
-	
+	*/
+
+
+	//while ()
 	return (0);
 }
