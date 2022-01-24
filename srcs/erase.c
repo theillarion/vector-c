@@ -51,3 +51,13 @@ bool	ft_erase_back(t_vector	*vector)
 	vector->elements = result;
 	return (true);
 }
+
+void	ft_delete_vector(t_vector	*vector)
+{
+	if (vector->elements != NULL)
+	{
+		free(vector->elements);
+		vector->elements = NULL;
+		vector->count = 0;
+	}
+}
