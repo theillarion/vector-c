@@ -29,11 +29,6 @@
 			"label": "Build Makefile",
 			"command": "make",
 			"args": ["debug"],
-			"options": {
-				"env": {
-					"shell": "/bin/bash"
-				}
-			},
 			"problemMatcher": [
                 "$gcc"
             ],
