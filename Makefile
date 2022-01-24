@@ -3,7 +3,7 @@ NAME_DEBUG	=	vector_debug
 CC			=	gcc
 CC_FLAGS	=	-Wall -Werror -Wextra
 CC_DFLAGS	=	-g
-SRCS		=	${wildcard srcs/*c}
+SRCS		=	${wildcard srcs/*.c}
 OBJS		=	${SRCS:.c=.o}
 OBJS_DEBUG	=	${SRCS:.c=_debug.o}
 INCLUDES	=	-Iincludes
