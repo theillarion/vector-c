@@ -1,36 +1,42 @@
-NAME		=	vector
-NAME_DEBUG	=	vector_debug
-CC			=	gcc
+NAME		=	libvector.a
+NAME_D		=	libvector_debug.a
+
+CC			=	cc
 CC_FLAGS	=	-Wall -Werror -Wextra
-CC_DFLAGS	=	-g
-SRCS		=	${wildcard srcs/*.c}
+CC_FLAGS_D	=	-g
+AR			=	ar
+AR_FLAGS	=	rcs
+AR_FLAGS_D	=	rc
+
+SRCS		=	${addprefix srcs/,\
+				empty.c erase.c get.c print.c push.c}
+HEADER		=	includes/vector.h
 OBJS		=	${SRCS:.c=.o}
 OBJS_DEBUG	=	${SRCS:.c=_debug.o}
 INCLUDES	=	-Iincludes
 RM			=	rm -rf
 
-%.o				:	%.c
-					${CC} ${CC_FLAGS} ${INCLUDES} -c $< -o $@
+.PHONY		:	all clean fclean re debug
 
-%_debug.o		:	%.c
-					${CC} ${CC_DFLAGS} ${CC_FLAGS} ${INCLUDES} -c $< -o $@
+%.o			:	%.c $(HEADER)
+				@$(CC) $(CC_FLAGS) $(INCLUDES) -c $< -o $@
 
-all				:	${NAME}
+%_debug.o	:	%.c $(HEADER)
+				@$(CC) $(CC_DFLAGS) $(CC_FLAGS) $(INCLUDES) -c $< -o $@
 
-${NAME}			:	${OBJS}
-					${CC} ${CC_FLAGS} ${INCLUDES} $^ -o ${NAME}
+all			:	$(NAME)
+debug		:	$(NAME_D)
 
-debug			:	${NAME_DEBUG}
+$(NAME)		:	$(OBJS)
+				@$(AR) $(AR_FLAGS) $(NAME) $?
 
-${NAME_DEBUG}	:	${OBJS_DEBUG}
-					${CC} ${CC_FLAGS} ${INCLUDES} $^ -o ${NAME_DEBUG}
+$(NAME_D)	:	$(OBJS_D)
+				@$(AR) $(AR_FLAGS) $(NAME_D) $?
 
 clean		:
-				${RM} ${NAME} ${NAME_DEBUG}
+				@$(RM) $(OBJS) $(OBJS_D)
 
 fclean		:	clean
-				${RM} ${OBJS} ${OBJS_DEBUG}
+				@$(RM) $(NAME) $(NAME_D)
 
 re			:	fclean all
-
-.PHONY		: all clean fclean re debug
