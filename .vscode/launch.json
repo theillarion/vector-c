@@ -9,7 +9,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			//"program": "${fileDirname}/${fileBasenameNoExtension}",
-			"program": "${workspaceRoot}/vector_debug",
+			"program": "${workspaceRoot}/test_debug",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${workspaceRoot}",

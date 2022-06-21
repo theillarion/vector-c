@@ -1,8 +1,6 @@
 #include "vector.h"
 
-bool	ft_empty_vector(const t_vector vector)
+bool	ft_empty(const t_vector	*vector)
 {
-	if (vector.elements == NULL || vector.count == 0)
-		return (true);
-	return (false);
+	return (vector == NULL || vector->count_elements == 0);
 }
