@@ -1,6 +1,6 @@
 #include "vector.h"
 
-void	ft_init(t_vector	*vector, unsigned short size_element)
+void	ft_init_vector(t_vector	*vector, unsigned short size_element)
 {
 	if (vector == NULL)
 		return;

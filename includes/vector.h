@@ -18,7 +18,7 @@ typedef struct s_vector
 }			t_vector;
 
 //		init.c
-void	ft_init(t_vector	*vector, unsigned short size_element);
+void	ft_init_vector(t_vector	*vector, unsigned short size_element);
 
 //		reserve.c
 void	ft_reserve(t_vector	*vector, size_t	capacity);
