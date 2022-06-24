@@ -13,7 +13,7 @@ SRCS		=	$(addprefix srcs/,\
 HEADER		=	$(addprefix includes/,\
 				vector.h utilities.h)
 OBJS		=	$(SRCS:.c=.o)
-OBJS_DEBUG	=	$(SRCS:.c=_debug.o)
+OBJS_D		=	$(SRCS:.c=_debug.o)
 INCLUDES	=	-Iincludes
 RM			=	rm -rf
 
