@@ -6,7 +6,6 @@
 # include <limits.h>
 # include <stdbool.h>
 # include <stdint.h>
-# include "utilities.h"
 
 typedef struct s_vector
 {

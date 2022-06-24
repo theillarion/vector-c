@@ -1,4 +1,5 @@
 #include "vector.h"
+#include "utilities.h"
 
 void	*ft_get_element(const t_vector	*vector, size_t index)
 {

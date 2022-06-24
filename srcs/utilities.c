@@ -1,6 +1,6 @@
 #include "utilities.h"
 
-void	*ft_memcpy(void	*dst, const void	*src, size_t n)
+void	*ft_vector_memcpy(void	*dst, const void	*src, size_t n)
 {
 	size_t	i;
 
@@ -15,7 +15,7 @@ void	*ft_memcpy(void	*dst, const void	*src, size_t n)
 	return (dst);
 }
 
-void	*ft_memmove(void	*dst, const void	*src, size_t n)
+void	*ft_vector_memmove(void	*dst, const void	*src, size_t n)
 {
 	size_t	i;
 
@@ -38,7 +38,7 @@ void	*ft_memmove(void	*dst, const void	*src, size_t n)
 	return (dst);
 }
 
-void	*ft_memset(void	*address, int code, size_t n)
+void	*ft_vector_memset(void	*address, int code, size_t n)
 {
 	size_t	i;
 
@@ -53,7 +53,7 @@ void	*ft_memset(void	*address, int code, size_t n)
 	return (address);
 }
 
-void	ft_smart_free(void	**address)
+void	ft_vector_smart_free(void	**address)
 {
 	if (address == NULL || *address == NULL)
 		return;

@@ -1,5 +1,6 @@
 #include "vector.h"
 #include <stdio.h>
+#include "utilities.h"
 
 void	ft_reserve(t_vector	*vector, size_t capacity)
 {
@@ -12,9 +13,9 @@ void	ft_reserve(t_vector	*vector, size_t capacity)
 		return;
 	if (vector->count_elements != 0)
 	{
-		if (ft_memcpy(storage, vector->storage, vector->size_element *
+		if (ft_vector_memcpy(storage, vector->storage, vector->size_element *
 			vector->count_elements) != NULL)
-			ft_smart_free((void **)&vector->storage);
+			ft_vector_smart_free((void **)&vector->storage);
 	}
 	vector->storage = storage;
 	vector->capacity = capacity;
