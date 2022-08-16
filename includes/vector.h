@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   vector.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: illarion <glashli@student.21-school.ru>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/16 14:38:35 by illarion          #+#    #+#             */
+/*   Updated: 2022/08/16 14:50:26 by illarion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef VECTOR_H
 # define VECTOR_H
 
@@ -9,12 +21,12 @@
 
 typedef struct s_vector
 {
-	void	*storage;
+	void			*storage;
 	unsigned short	size_element;
-	size_t	capacity;
-	size_t	count_elements;
-	size_t	max_count_elements;
-}			t_vector;
+	size_t			capacity;
+	size_t			count_elements;
+	size_t			max_count_elements;
+}					t_vector;
 
 //		init.c
 void	ft_init_vector(t_vector	*vector, unsigned short size_element);
@@ -33,7 +45,7 @@ size_t	ft_size(const t_vector	*vector);
 size_t	ft_capacity(const t_vector	*vector);
 
 //		push.c
-void 	ft_push_back(t_vector	*vector, void	*element);
+void	ft_push_back(t_vector	*vector, void	*element);
 
 //		erase.c
 void	ft_erase(t_vector	*vector, size_t index);

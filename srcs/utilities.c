@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utilities.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: illarion <glashli@student.21-school.ru>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/16 14:38:56 by illarion          #+#    #+#             */
+/*   Updated: 2022/08/16 14:44:32 by illarion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "utilities.h"
 
 void	*ft_vector_memcpy(void	*dst, const void	*src, size_t n)
@@ -56,7 +68,7 @@ void	*ft_vector_memset(void	*address, int code, size_t n)
 void	ft_vector_smart_free(void	**address)
 {
 	if (address == NULL || *address == NULL)
-		return;
+		return ;
 	free(*address);
 	*address = NULL;
 }

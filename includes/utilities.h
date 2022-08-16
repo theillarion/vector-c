@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utilities.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: illarion <glashli@student.21-school.ru>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/16 14:38:32 by illarion          #+#    #+#             */
+/*   Updated: 2022/08/16 14:50:35 by illarion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef UTILITIES_H
 # define UTILITIES_H
 
-#include <stdlib.h>
+# include <stdlib.h>
 
 typedef unsigned char	t_uchar;
 
