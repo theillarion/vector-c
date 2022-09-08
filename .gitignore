@@ -2,4 +2,5 @@
 *vector*
 *.log
 .idea
+.vscode
 test*
