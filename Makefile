@@ -9,7 +9,7 @@ AR_FLAGS	=	rcs
 AR_FLAGS_D	=	rc
 
 SRCS		=	$(addprefix srcs/,\
-				empty.c erase.c get.c push.c init.c reserve.c utilities.c resize.c)
+				clear.c empty.c erase.c foreach.c get.c push.c init.c reserve.c utilities.c resize.c)
 HEADER		=	$(addprefix includes/,\
 				vector.h utilities.h)
 OBJS		=	$(SRCS:.c=.o)
@@ -33,7 +33,7 @@ NEWLINE			=	\n
 				@printf "ready $(COLOR_LYELLOW)$@$(NOCOLOR)$(NEWLINE)"
 
 %_debug.o	:	%.c $(HEADER)
-				@$(CC) $(CC_DFLAGS) $(CC_FLAGS) $(INCLUDES) -c $< -o $@
+				@$(CC) $(CC_FLAGS_D) $(CC_FLAGS) $(INCLUDES) -c $< -o $@
 				@printf "$(COLOR_LCYAN)build object$(NOCOLOR) [$(COLOR_LGREEN)info$(NOCOLOR)]: "
 				@printf "ready $(COLOR_LYELLOW)$@$(NOCOLOR)$(NEWLINE)"
 
@@ -46,7 +46,7 @@ $(NAME)		:	$(OBJS)
 				@printf "ready $(COLOR_LYELLOW)$(NAME)$(NOCOLOR) for $(COLOR_LYELLOW)$(OS)$(NOCOLOR)$(NEWLINE)"
 
 $(NAME_D)	:	$(OBJS_D)
-				@$(AR) $(AR_FLAGS) $(NAME_D) $?
+				@$(AR) $(AR_FLAGS_D) $(NAME_D) $?
 				@printf "$(COLOR_LCYAN)ar debug$(NOCOLOR) [$(COLOR_LGREEN)info$(NOCOLOR)]: "
 				@printf "ready $(COLOR_LYELLOW)$(NAME_D)$(NOCOLOR) for $(COLOR_LYELLOW)$(OS)$(NOCOLOR)$(NEWLINE)"
 
@@ -63,3 +63,8 @@ fclean		:	clean
 re			:	fclean all
 				@printf "$(COLOR_LCYAN)$@$(NOCOLOR) [$(COLOR_LGREEN)info$(NOCOLOR)]: "
 				@printf "ready $(COLOR_LYELLOW)$(NAME)$(NOCOLOR) for $(COLOR_LYELLOW)$(OS)$(NOCOLOR)$(NEWLINE)"
+
+norm		:
+				@norminette $(SRCS) $(HEADER)
+				@printf "$(COLOR_LCYAN)norminette$(NOCOLOR) [$(COLOR_LGREEN)info$(NOCOLOR)]: "
+				@printf "ready $(COLOR_LYELLOW)check norminette$(NOCOLOR) for $(COLOR_LYELLOW)$(OS)$(NOCOLOR)$(NEWLINE)"
