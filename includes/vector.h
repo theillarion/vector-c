@@ -6,7 +6,7 @@
 /*   By: illarion <glashli@student.21-school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 14:38:35 by illarion          #+#    #+#             */
-/*   Updated: 2022/08/16 14:50:26 by illarion         ###   ########.fr       */
+/*   Updated: 2022/09/08 20:12:45 by illarion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,11 @@ void	ft_erase_all(t_vector	*vector);
 
 //		empty.c
 bool	ft_empty(const t_vector	*vector);
+
+//		foreach.c
+void	ft_foreach_vector(const t_vector *vector, void (*func)(void *));
+
+//		clear.c
+void	ft_clear_vector(t_vector	*vector, void (*func)(void *));
 
 #endif
