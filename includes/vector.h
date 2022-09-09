@@ -6,7 +6,7 @@
 /*   By: illarion <glashli@student.21-school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 14:38:35 by illarion          #+#    #+#             */
-/*   Updated: 2022/09/08 20:12:45 by illarion         ###   ########.fr       */
+/*   Updated: 2022/09/09 23:13:04 by illarion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,12 @@ typedef struct s_vector
 	size_t			capacity;
 	size_t			count_elements;
 	size_t			max_count_elements;
+	void			(*destructor)(void *);
 }					t_vector;
 
 //		init.c
-void	ft_init_vector(t_vector	*vector, unsigned short size_element);
+void	ft_init_vector(t_vector	*vector, unsigned short size_element,
+			void	(*destructor)(void *));
 
 //		reserve.c
 void	ft_reserve(t_vector	*vector, size_t	capacity);
@@ -51,6 +53,8 @@ void	ft_push_back(t_vector	*vector, void	*element);
 void	ft_erase(t_vector	*vector, size_t index);
 void	ft_erase_front(t_vector	*vector);
 void	ft_erase_back(t_vector	*vector);
+
+//		! Deprecated function !
 void	ft_erase_all(t_vector	*vector);
 
 //		empty.c
@@ -60,6 +64,6 @@ bool	ft_empty(const t_vector	*vector);
 void	ft_foreach_vector(const t_vector *vector, void (*func)(void *));
 
 //		clear.c
-void	ft_clear_vector(t_vector	*vector, void (*func)(void *));
+void	ft_clear_vector(t_vector	*vector);
 
 #endif
