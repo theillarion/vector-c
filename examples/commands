@@ -1,2 +1,2 @@
 cc -g -Wall -Werror -Wextra -I../includes ${SOURCE_FILE} -L.. -lvector_debug -o test_debug
-valgrind -s --leak-check=full --show-leak-kinds=all ./${SOURCE_FILE}
+valgrind -s --leak-check=full --show-leak-kinds=all ./test_debug
