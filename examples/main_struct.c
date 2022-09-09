@@ -6,7 +6,7 @@
 /*   By: illarion <glashli@student.21-school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 14:38:21 by illarion          #+#    #+#             */
-/*   Updated: 2022/08/16 15:07:32 by illarion         ###   ########.fr       */
+/*   Updated: 2022/09/09 23:11:36 by illarion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	main(void)
 	t_point		point;
 
 	point = ft_create_point(7, 77);
-	ft_init_vector(&vector, sizeof(t_point));
+	ft_init_vector(&vector, sizeof(t_point), NULL);
 
 	ft_reserve(&vector, 6);
 

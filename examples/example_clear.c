@@ -69,16 +69,20 @@ int main()
 {
 	t_vector	vector;
 
-	ft_init_vector(&vector, sizeof(t_my_struct));
+	ft_init_vector(&vector, sizeof(t_my_struct), &ft_free_element);
 
 	ft_push(&vector, 13, "Petr");
 	ft_push(&vector, 15, "Vasya");
+	ft_push(&vector, 17, "Igor");
 
 	ft_foreach_vector(&vector, &ft_print);
 
-	//ft_erase_all(&vector);
+	ft_erase(&vector, 1);
 
-	ft_clear_vector(&vector, &ft_free_element);
+	printf("\n");
+	ft_foreach_vector(&vector, &ft_print);
+
+	ft_clear_vector(&vector);
 
 	return (0);
 }

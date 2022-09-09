@@ -6,7 +6,7 @@
 /*   By: illarion <glashli@student.21-school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 14:38:21 by illarion          #+#    #+#             */
-/*   Updated: 2022/08/16 14:58:17 by illarion         ###   ########.fr       */
+/*   Updated: 2022/09/09 23:15:54 by illarion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(void)
 	int			number;
 
 	number = 777;
-	ft_init_vector(&vector, sizeof(int));
+	ft_init_vector(&vector, sizeof(int), NULL);
 
 	ft_reserve(&vector, 6);
 
