@@ -6,12 +6,11 @@
 /*   By: illarion <glashli@student.21-school.ru>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 14:38:51 by illarion          #+#    #+#             */
-/*   Updated: 2022/08/16 14:56:07 by illarion         ###   ########.fr       */
+/*   Updated: 2022/10/03 19:28:28 by illarion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.h"
-#include <stdio.h>
 #include "utilities.h"
 
 void	ft_reserve(t_vector	*vector, size_t capacity)
